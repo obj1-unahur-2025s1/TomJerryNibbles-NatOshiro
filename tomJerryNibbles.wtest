@@ -1,17 +1,33 @@
 import tomJerryNibbles.*
 
+// pruebas unitarias (testear cada unos de los metodos para checkear)
 describe "Grupo de test" {
-
-  test "test 1" {
-    assert.equals(100, 50+50)
+  //test para evaluar nros
+  test "velocidad maxima de Tom al inicial en 10" {
+    assert.equals(tom.velocidadMaxima() , 10)
+    //assert.equals(objeto.method(), valor a chequear)
   }
 
-  test "test 3" {
+//test para evaluar bool
+  test "si Tom se come a jerry su velocidad maxima es de " {
+    tom.comer(jerry)
+    assert.equals(tom.velocidadMaxima(), 15.2)
+    assert.equals(tom.velocidadMaxima(), 102)
     assert.that(true)
   }
 
-  test "test 4" {
-    assert.notThat(false)
+// queremos testar (comprobar) si la expresion es falsa
+  test "si Tom se come a jerry su velocidad maxima es 14 y su energia es 90" {
+    tom.comer(jerry)
+    tom.corre(24)
+    assert.equals(14, tom.velocidadMaxima())
+    assert.equals(90, tom.velocidadMaxima())
   }
-
+}
+test "jerry cumple años" {
+  assert.equals(3, jerry.cumplirAnois() )  
+}
+test "tom cumple años y vuelve a comer a comer" {
+  tom.cumpleanios()
+  toma.comer(jerry)
 }
